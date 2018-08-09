@@ -1,0 +1,21 @@
+@import '../../constants';
+
+.weather {
+  &__item {
+    &-title {
+      font-size: $fontSizeS;
+    }
+
+    &-temp {
+      font-size: $fontSizeL;
+    }
+
+    &_outside {
+      padding-right: 22px;
+    }
+
+    &_cloud-drizzle {
+      background: url('assets/cloud-drizzle.png') 95% 75% / 30% no-repeat;
+    }
+  }
+}

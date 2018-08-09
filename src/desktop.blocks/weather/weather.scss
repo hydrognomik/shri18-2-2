@@ -1,0 +1,26 @@
+.weather {
+  display: flex;
+
+  &__item {
+    margin-right: 18px;
+
+    &-title {
+      color: $lightGrey;
+      margin-bottom: 4px;
+    }
+
+    &-temp {
+      font-size: $fontSizeXL;
+      font-weight: 700;
+      line-height: 1.16;
+    }
+
+    &_outside {
+      padding-right: 31px;
+    }
+
+    &_cloud-drizzle {
+      background: url('assets/cloud-drizzle.png') 100% 70% / 26px no-repeat;
+    }
+  }
+}

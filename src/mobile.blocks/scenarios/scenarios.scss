@@ -1,0 +1,26 @@
+@import '../../constants';
+
+.scenarios {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+
+  padding: 6px 0 6px $mobilePadding;
+
+  &__paginator {
+    display: none;
+  }
+
+  &__page {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    min-width: 1px;
+  }
+}

@@ -1,0 +1,46 @@
+.main {
+  height: 331px;
+  border-radius: 20px;
+  padding: 0 20px 0 25px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: url('assets/main-bg.png') center center / cover no-repeat;
+
+  &__greeting {
+    margin-top: 6px;
+    font-size: $fontSizeL;
+    font-weight: 700;
+  }
+
+  &__info {
+    width: 64.285%;
+    padding-top: 20px;
+  }
+
+  &__panel {
+    margin-bottom: 14px;
+  }
+
+  &__status {
+    margin-top: 6px;
+    line-height: 16px;
+  }
+
+  &__upcoming {
+    width: 220px;
+    height: 100%;
+    overflow-y: scroll;
+
+    &-wrapper {
+      width: 200px;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__weather {
+    margin-top: 25px;
+  }
+}

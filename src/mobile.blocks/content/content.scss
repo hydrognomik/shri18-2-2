@@ -1,0 +1,37 @@
+@import '../../constants';
+
+.content {
+  margin-top: $headerHeightMobile;
+  padding-top: 0;
+
+  &__item {
+    &:not(:nth-child(n + 3)) {
+      width: 100%;
+    }
+
+    &:first-child {
+      padding-top: 0;
+
+      & .content__item-header {
+        display: none;
+      }
+    }
+
+    &-header {
+      padding-left: $mobilePadding;
+    }
+
+    &_main {
+      padding: 0 $mobilePadding;
+    }
+
+    &_scenarios {
+      margin-right: 0;
+      padding: 0;
+    }
+
+    &__devices {
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import '../../constants';
+
+.adjust-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  border-radius: 30px;
+
+  width: 100%;
+  height: 60px;
+  margin: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+
+    cursor: pointer;
+
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(51, 51, 51, 0.1);
+    border-radius: 30px;
+
+    box-shadow: 0 0 0 4px $white;
+  }
+
+  &::-moz-range-thumb {
+    box-sizing: border-box;
+    cursor: pointer;
+
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(51, 51, 51, 0.1);
+    border-radius: 30px;
+    background: transparent;
+
+    box-shadow: 0 0 0 4px $white;
+  }
+
+  &::-moz-range-track {
+    background: transparent;
+  }
+
+  &__container_theme_temp {
+    position: relative;
+
+    &::before,
+    &::after {
+      color: $white;
+      font-size: $fontSizeM;
+      font-weight: 700;
+      position: absolute;
+      top: 20px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &::before {
+      content: '–10';
+      left: 15px;
+    }
+
+    &::after {
+      content: '+30';
+      right: 15px;
+    }
+  }
+
+  &__container_theme_light {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &::before {
+      top: 14px;
+      left: 14px;
+      width: 30px;
+      height: 30px;
+      background: url('assets/adjust-bar_light_from.svg') center center / contain no-repeat;
+    }
+
+    &::after {
+      top: 13px;
+      right: 13px;
+      width: 34px;
+      height: 34px;
+      background: url('assets/adjust-bar_light_to.svg') center center / contain no-repeat;
+    }
+  }
+
+  &_theme {
+    &_temp {
+      background-image: linear-gradient(90deg, $adjusterBlue 0%, $adjusterYellow 50%, $adjusterOrange 100%);
+    }
+
+    &_light {
+      background-image: linear-gradient(90deg, $adjusterYellow2 0%, $adjusterOrange2 100%);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.paginator {
+  height: 16px;
+  width: 47px;
+  display: flex;
+  justify-content: space-between;
+
+  & div {
+    width: 16px;
+  }
+
+  &_hide {
+    display: none;
+  }
+
+  &__arrow {
+    opacity: 1;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &_disabled {
+      opacity: 0.3;
+    }
+  }
+}

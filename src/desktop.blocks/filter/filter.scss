@@ -1,0 +1,52 @@
+@import '../../constants';
+
+.filter {
+  &__select {
+    display: none;
+  }
+
+  &__item {
+    &-label {
+      display: inline-block;
+
+      font-size: $fontSizeFilter;
+      line-height: 1;
+      font-weight: 700;
+
+      background: $panelColor;
+
+      min-height: 30px;
+      padding: 8px 13px;
+      border-radius: 15px;
+      margin-right: 11px;
+
+      cursor: pointer;
+
+      &:hover {
+        background: $yellow;
+      }
+    }
+
+    &-radio {
+      display: none;
+
+      &:checked + label {
+        background: $yellow;
+      }
+    }
+  }
+}
+
+$list: kitchen room lamp cam;
+
+@each $group in $list {
+  .filter__item-radio_#{$group}:checked {
+    & ~ .devices .panel {
+      display: none;
+    }
+
+    & ~ .devices .panel_#{$group} {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.adjust-bar {
+  &__container {
+    transform: rotate(-90deg);
+    transform-origin: 100% 50%;
+    right: 50%;
+    margin: 0;
+
+    &::before {
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}

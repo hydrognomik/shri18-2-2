@@ -1,0 +1,19 @@
+@import '../../constants';
+
+.footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding-left: 40px;
+  width: 100%;
+  height: 60px;
+
+  font-size: $fontSizeS;
+
+  &__link {
+    margin-right: 20px;
+  }
+}

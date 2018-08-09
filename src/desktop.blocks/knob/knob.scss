@@ -1,0 +1,68 @@
+@import '../../constants';
+
+.knob {
+  width: 220px;
+  height: 220px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  svg {
+    width: 220px;
+    height: 220px;
+    transform: rotate(90deg);
+  }
+
+  &__indicator {
+    fill: none;
+    stroke: $knobIndicatorColor;
+    stroke-width: 20px;
+    stroke-dasharray: 0 629; // min: 0, max: 515
+    transform: rotate(29deg);
+
+    &-bounds {
+      fill: transparent;
+      stroke: $white;
+      stroke-width: 21px;
+      stroke-dasharray: 99 629;
+      transform: rotate(-29deg);
+    }
+
+    &-bg {
+      fill: rgba($color: $black, $alpha: 0.7);
+    }
+
+    &-mask {
+      fill: transparent;
+      stroke: $white;
+      stroke-width: 22px;
+      stroke-dasharray: 4 1;
+      transform: rotate(1deg);
+    }
+  }
+
+  &__self {
+    fill: $knobColor;
+    filter: url('#knob-shadow');
+
+    cursor: pointer;
+  }
+
+  &__value {
+    font-size: 66px;
+    font-weight: 700;
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+  }
+}

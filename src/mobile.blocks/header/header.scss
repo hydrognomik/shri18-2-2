@@ -1,0 +1,18 @@
+@import '../../constants';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  height: $headerHeightMobile;
+  padding: 0 20px;
+  border-bottom: none;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: $white;
+}

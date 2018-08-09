@@ -1,0 +1,25 @@
+@import '../../constants';
+
+.devices {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: hidden;
+
+  padding: 20px 0 6px $desktopPadding;
+
+  &__panel {
+    margin-right: 15px;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    min-width: 25px;
+  }
+
+  &__paginator {
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
+}

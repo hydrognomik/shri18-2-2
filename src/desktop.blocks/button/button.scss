@@ -1,0 +1,32 @@
+@import '../../constants';
+
+.button {
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $white;
+
+  &_color_yellow {
+    background: $yellow;
+  }
+
+  &_size {
+    &_l {
+      font-size: $fontSizeM;
+      font-weight: 700;
+
+      height: 60px;
+      border-radius: 20px;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 2px 6px 0 rgba(255, 225, 225, 0.6);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

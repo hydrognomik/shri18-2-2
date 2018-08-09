@@ -1,0 +1,37 @@
+@import '../../constants';
+
+.modal {
+  padding: 20px;
+
+  &__body {
+    height: calc(100% - (#{$buttonHeight} * 2 + 15px * 2));
+  }
+
+  &__controls {
+    .button {
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__content {
+    height: 100%;
+    max-height: unset;
+  }
+
+  &__title {
+    font-size: $fontSizeM;
+  }
+
+  &__value {
+    display: none;
+  }
+
+  &__filter {
+    display: flex;
+    overflow: hidden;
+  }
+}

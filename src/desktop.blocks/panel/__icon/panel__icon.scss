@@ -1,0 +1,24 @@
+.panel__icon {
+  width: 24px;
+  height: 24px;
+
+  &_temp_off {
+    background: url('assets/panel__icon_temp_off.svg') center center / contain no-repeat;
+  }
+
+  &_temp_on {
+    background: url('assets/panel__icon_temp_on.svg') center center / contain no-repeat;
+  }
+
+  &_light_off {
+    background: url('assets/panel__icon_light_off.svg') center center / contain no-repeat;
+  }
+
+  &_light_on {
+    background: url('assets/panel__icon_light_on.svg') center center / contain no-repeat;
+  }
+
+  &_clock {
+    background: url('assets/panel__icon_clock.svg') center center / contain no-repeat;
+  }
+}

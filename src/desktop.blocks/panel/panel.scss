@@ -1,0 +1,52 @@
+@import '../constants';
+
+.panel {
+  $panel: &;
+
+  padding: 14px;
+  min-height: 100px;
+  width: 200px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+
+  background: $panelColor;
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease-out;
+
+  &:hover {
+    background: $white;
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &_device {
+    height: 120px;
+  }
+
+  &_first {
+    margin-top: 20px;
+  }
+
+  &_last {
+    margin-bottom: 20px;
+  }
+
+  &__sub {
+    font-size: $fontSizeS;
+    color: $lightGrey;
+  }
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+}

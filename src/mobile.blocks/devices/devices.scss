@@ -1,0 +1,11 @@
+@import '../../constants';
+
+.devices {
+  width: 100%;
+  overflow-x: scroll;
+  padding-left: $mobilePadding;
+
+  &::after {
+    min-width: 1px;
+  }
+}
